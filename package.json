@@ -5,11 +5,15 @@
   "main": "lib/coppe.js",
   "scripts": {
     "prepublish": "$(npm bin)/coffee -o lib -c src/*.coffee",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "$(npm bin)/mocha --require espower-coffee/guess test/*.coffee"
   },
   "author": "mizchi",
   "license": "MIT",
   "devDependencies": {
-    "coffee-script": "^1.9.1"
+    "coffee-script": "^1.9.1",
+    "espower-coffee": "^0.10.0",
+    "mocha": "^2.2.4",
+    "power-assert": "^0.10.2",
+    "react": "^0.13.1"
   }
 }
