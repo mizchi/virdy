@@ -1,0 +1,15 @@
+{
+  "name": "coppe",
+  "version": "0.1.0",
+  "description": "handy react element DSL",
+  "main": "lib/coppe.js",
+  "scripts": {
+    "prepublish": "$(npm bin)/coffee -o lib -c src/*.coffee",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mizchi",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.9.1"
+  }
+}
