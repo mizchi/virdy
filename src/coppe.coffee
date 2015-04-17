@@ -14,9 +14,6 @@ transform = do ->
   $ = (element, props, textOrBlock) ->
     node = null
     switch typeof textOrBlock
-      when 'string'
-        node = new Node element, props, textOrBlock
-        ctx.addChild node
       when 'function'
         node = new Node element, props, null
         ctx.addChild node
@@ -24,6 +21,9 @@ transform = do ->
         ctx = node
         textOrBlock()
         ctx = _tmp # restore
+      else
+        node = new Node element, props, textOrBlock
+        ctx.addChild node
     null
 
   (block) ->
