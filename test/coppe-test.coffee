@@ -19,3 +19,8 @@ describe 'runtime', ->
 
     console.log React.renderToStaticMarkup(el)
 
+  it 'should embed by $.direct', ->
+    el = runtime ($) ->
+      div = React.createElement 'div'
+      $.direct div
+    console.log React.renderToStaticMarkup(el)
