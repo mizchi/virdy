@@ -1,6 +1,6 @@
 {
   "name": "coppe",
-  "version": "0.2.0",
+  "version": "0.3.0-alpha",
   "description": "handy react element DSL",
   "main": "runtime/react",
   "scripts": {
