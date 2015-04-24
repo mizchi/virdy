@@ -1,15 +1,7 @@
-module.exports = runtime = (block) ->
-  ast = transform(block)
-  convert ast
-
-class Node
-  constructor: (@element, @props, @text) ->
-    @children = []
-  addChild: (node) ->
-    @children.push node
+Node = require './node'
 
 # template function to ast
-transform = do ->
+module.exports = transform = do ->
   ctx = null
   $ = (element, props, textOrBlock) ->
     node = null
@@ -36,13 +28,3 @@ transform = do ->
       return ctx.children[0]
     else
       ctx
-
-# ast to react element
-convert = (element) ->
-  if element instanceof Node
-    {element, props, children, text} = element
-    React.createElement element, props, (
-      text ? children.map (child) -> convert(child)
-    )
-  else
-    element

@@ -1,5 +1,5 @@
 global.React = require 'react'
-runtime = require '../src/coppe'
+runtime = require '../runtime/react'
 
 describe 'runtime', ->
   it 'should parse block', ->

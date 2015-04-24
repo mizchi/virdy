@@ -2,9 +2,9 @@
   "name": "coppe",
   "version": "0.2.0",
   "description": "handy react element DSL",
-  "main": "lib/coppe.js",
+  "main": "runtime/react",
   "scripts": {
-    "prepublish": "$(npm bin)/coffee -o lib -c src/*.coffee",
+    "prepublish": "$(npm bin)/gulp",
     "test": "$(npm bin)/mocha --require espower-coffee/guess test/*.coffee"
   },
   "author": "mizchi",
@@ -12,6 +12,8 @@
   "devDependencies": {
     "coffee-script": "^1.9.1",
     "espower-coffee": "^0.10.0",
+    "gulp": "^3.8.11",
+    "gulp-coffee": "^2.3.1",
     "mocha": "^2.2.4",
     "power-assert": "^0.10.2",
     "react": "^0.13.1"
