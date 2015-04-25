@@ -1,12 +1,13 @@
 {
-  "name": "coppe",
-  "version": "0.3.0-alpha",
-  "description": "handy react element DSL",
+  "name": "virdy",
+  "version": "0.3.0",
+  "description": "Handy virtual dom DSL for React / Mithril / Mercury",
   "main": "runtime/react",
   "scripts": {
     "prepublish": "$(npm bin)/gulp",
     "test": "$(npm bin)/mocha --require espower-coffee/guess test/*.coffee"
   },
+  "keywords": ["react", "mithril", "mercury"],
   "author": "mizchi",
   "license": "MIT",
   "devDependencies": {

@@ -1,1 +1,1 @@
-module.exports = require('../lib/runtime/virtual-dom');
+module.exports = require('../lib/runtime/mercury.js');
