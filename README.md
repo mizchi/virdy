@@ -1,4 +1,4 @@
-# Virchan
+# Virdy
 
 ```
 npm install virdy --save-dev
