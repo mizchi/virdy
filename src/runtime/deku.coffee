@@ -13,8 +13,10 @@ module.exports = runtime = (block, options = {}) ->
 convert = (element) ->
   if element instanceof Node
     {element, props, children, text} = element
-    dom element, props, (
-      text ? children.map (child) -> convert(child)
-    )
+    if element is '_t' then text
+    else
+      dom element, props, (
+        text ? children.map (child) -> convert(child)
+      )
   else
     element

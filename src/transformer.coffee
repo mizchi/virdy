@@ -18,8 +18,8 @@ module.exports = transform = do ->
         ctx.addChild node
     null
 
-  $.direct = (el) ->
-    ctx.addChild el
+  $.direct = (el) -> ctx.addChild el
+  $.text = (text) -> ctx.addChild new Node '_t', {}, text
 
   (block) ->
     ctx = new Node 'div', {className: '__wrapper'}

@@ -9,11 +9,15 @@ module.exports = runtime = (block, options = {}) ->
   convert ast
 
 # ast to react element
-convert = (element) ->
-  if element instanceof Node
-    {element, props, children, text} = element
-    React.createElement element, props, (
-      text ? children.map (child) -> convert(child)
-    )
+convert = (el) ->
+  if el instanceof Node
+    console.log el
+    {element, props, children, text} = el
+    if element is '_t'
+      text
+    else
+      React.createElement element, props, (
+        text ? children.map (child) -> convert(child)
+      )
   else
-    element
+    el
